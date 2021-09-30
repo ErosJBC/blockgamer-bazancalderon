@@ -1,0 +1,19 @@
+
+.btn-contact {
+    font-weight: 500;
+    border-radius: 0.6rem;
+    height: 3rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    font-size: 1.15rem;
+    background-color: $background-color-dark;
+    color: $text-color-white;
+    width: 11rem;
+    transition: 0.8s;
+}
+
+.btn-contact:hover {
+    background-color: $text-color-one;
+    transition: all 0.8s;
+}
