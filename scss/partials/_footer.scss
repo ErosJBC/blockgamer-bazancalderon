@@ -1,0 +1,13 @@
+/* Estilos para el Footer */
+
+.text-change-color {
+    &:hover {
+        color: $link-text-color;
+        transition: all 0.8s;
+    }
+}
+
+.shadow-one {
+    box-shadow: 0 0.25rem 0.25rem $shadow-color-one;
+}
+

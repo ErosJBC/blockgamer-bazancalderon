@@ -1,0 +1,29 @@
+{
+  "name": "blockgamer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss scss/index.scss css/index.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ErosJBC/blockgamer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ErosJBC/blockgamer/issues"
+  },
+  "homepage": "https://gitlab.com/ErosJBC/blockgamer#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "jsvectormap": "^1.3.3"
+  }
+}

@@ -1,0 +1,124 @@
+/* Estilos para la página principal */
+
+/* Formato para la sección de características */
+
+.caracteristica-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.img-style{
+    max-width: 15rem;
+    display: block;
+    margin: auto;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+}
+
+.card-scale {
+    transition: 1s;
+    &:hover {
+        z-index: 3;
+        background-color: $background-color-ilumine-dark;
+        transform: scale(1.1);
+        border-radius: 0.5rem;
+    }
+}
+
+.card-border-none {
+    border-radius: 0;
+}
+
+.content-caracteristica {
+    &:hover {
+        background-color: $background-color-ilumine-dark;
+        transform: scale(1.1);
+        border-radius: 0.5rem;
+    }
+}
+
+/* Formato para la sección de descripción */
+
+.description-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-description {
+    font-size: 2.65rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 2.5rem;
+}
+
+.content-description {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.content-square-descr {
+    margin: 1.5rem 5rem;
+    background-color: $background-color-dark;
+    border-radius: 1rem;
+    p {
+        padding: 0 1.5rem;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+        color: $text-color-white;
+    }
+}
+
+.description-img {
+    width: 20rem;
+    display: block;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* Formato para la sección de promoción y contacto */
+
+.promotion-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-color-dark;
+    color: $text-color-white;
+    h2 {
+        font-size: 3rem;
+        padding: 3rem 4.5rem;
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    p {
+        font-size: 1.75rem;
+        padding: 2rem 0;
+        text-align: center;
+    }
+}
+
+// .button {
+//     font-size: 1.25rem;
+//     font-weight: bold;
+//     border-radius: 0.8rem;
+//     border: none;
+//     background-color: $background-color-white;
+//     cursor: pointer;
+//     width: 15rem;
+//     height: 3rem;
+//     margin: 1rem;
+//     margin-bottom: 3rem;
+//     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+//     animation: pulse-button 1.5s infinite;
+// }
+
+.button {
+    @include btn-color($is-dark: false, $flat: false)
+}
+

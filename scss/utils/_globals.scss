@@ -1,0 +1,154 @@
+/* Resetear estilos predeterminados */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    &::-webkit-scrollbar {
+        width: 0.75rem;
+        background-color: $background-color-dark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $background-color-ilumine;
+        border: 0.2rem solid;
+        border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        &:hover {
+            background-color: $background-color-scrollbar;
+            transition: all 1s;
+        }
+    }
+}
+
+@mixin theme-colors ($dark-theme: true){
+    @if $dark-theme {
+        background-color: $background-color-dark;
+    } @else {
+        background-color: $background-color-white;
+    }
+}
+
+@mixin btn-styles-white ($mod, $islarge, $resp) {
+    
+    font-weight: bold;
+    border-radius: 0.8rem;
+    border: none;
+    height: 3rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    
+    @if not $mod and not $islarge and not $resp {
+        font-size: 1.25rem;
+        background-color: $background-color-white;
+        color: $text-color-black;
+        width: 15rem;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+    }
+    animation: pulse-button 1.5s infinite;
+    @include button-effect($mod-effect: false)
+}
+
+@mixin btn-styles-dark ($mod, $islarge, $resp) {
+    
+    font-weight: bold;
+    border-radius: 0.8rem;
+    border: none;
+    height: 3rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+
+    @if $mod and $islarge and not $resp {
+        width: 15rem;
+        font-size: 1.075rem;
+        background-color: $background-color-ilumine-dark;
+        color: $text-color-white;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    } @else {
+        @if $mod and $islarge and $resp {
+            width: 22rem;
+            font-size: 1.5rem;
+            background-color: $background-color-ilumine-dark;
+            color: $text-color-white;
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+        }
+    }
+    animation: pulse-button-mod 1.5s infinite;
+    @include button-effect($mod-effect: true)
+}
+
+@mixin button-effect ($mod-effect: false){
+    @if not $mod-effect {
+        @keyframes pulse-button {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(256, 256, 256, 0.2);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 1.5rem rgba(256, 256, 256, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+            }
+        }
+    } @else {
+        @keyframes pulse-button-mod {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 1.5rem rgba(0, 0, 0, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
+
+@mixin btn-color ($is-dark, $flat) {
+    @if not $is-dark and not $flat{
+        @include btn-styles-white(false, false, false)
+    } @else {
+        @if $is-dark and not $flat{
+            @include btn-styles-dark(true, true, false)
+        } @else {
+            @include btn-styles-dark(true, true, true)
+        }
+    }
+}
+
+.active-white {
+    background-color: $background-color-white;
+}
+
+.text-animation {
+    &:hover{
+        color: $text-color-one;
+        transition: all 1s;
+    }
+}
+
+.btn-large {
+    width: 10rem;
+}
+
+/* Keyframes para elementos */

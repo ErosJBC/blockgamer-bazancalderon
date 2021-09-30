@@ -1,0 +1,14 @@
+
+.img-other-styles {
+    width: 3rem;
+    border-radius: 0.5rem;
+}
+
+.col-hover {
+    transition: 1.5s;
+    z-index: 3;
+    &:hover {
+        background-color: $background-color-ilumine-dark;
+        transform: scale(1.01);
+    }
+}

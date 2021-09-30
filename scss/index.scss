@@ -1,0 +1,14 @@
+/* Imports */
+@import "./utils/variables";
+@import "./utils/globals";
+
+/* Partials */
+@import "./partials/header";
+@import "./partials/footer";
+
+/* Pages */
+@import "./pages/home";
+@import "./pages/services";
+@import "./pages/industries";
+@import "./pages/prices";
+@import "./pages/contact";

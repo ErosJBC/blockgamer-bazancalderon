@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/* Imports */
+/* Variables para usar en el CSS */
+/* Resetear estilos predeterminados */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Roboto', sans-serif; }
+
+body::-webkit-scrollbar {
+  width: 0.75rem;
+  background-color: #151515; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #C5C5C5;
+  border: 0.2rem solid;
+  border-radius: 0.5rem; }
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #969696;
+  transition: all 1s; }
+
+.active-white {
+  background-color: #FFFFFF; }
+
+.text-animation:hover {
+  color: #004965;
+  transition: all 1s; }
+
+.btn-large {
+  width: 10rem; }
+
+/* Keyframes para elementos */
+/* Partials */
+/* Estilos para la cabecera */
+.bg-dark-one {
+  background-color: #151515; }
+
+.bg-dark-one .navlist-nav .link-color {
+  width: 7.5rem;
+  border-radius: 0.25rem;
+  color: #FFFFFF; }
+  .bg-dark-one .navlist-nav .link-color:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: all 0.8s; }
+
+/* Estilos para el Footer */
+.text-change-color:hover {
+  color: #838f8c;
+  transition: all 0.8s; }
+
+.shadow-one {
+  box-shadow: 0 0.25rem 0.25rem #070707; }
+
+/* Pages */
+/* Estilos para la página principal */
+/* Formato para la sección de características */
+.caracteristica-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+
+.img-style {
+  max-width: 15rem;
+  display: block;
+  margin: auto;
+  border-radius: 0.5rem;
+  margin: 1rem auto; }
+
+.card-scale {
+  transition: 1s; }
+  .card-scale:hover {
+    z-index: 3;
+    background-color: #000000;
+    transform: scale(1.1);
+    border-radius: 0.5rem; }
+
+.card-border-none {
+  border-radius: 0; }
+
+.content-caracteristica:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+  border-radius: 0.5rem; }
+
+/* Formato para la sección de descripción */
+.description-flex {
+  display: flex;
+  flex-direction: column; }
+
+.title-description {
+  font-size: 2.65rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 2.5rem; }
+
+.content-description {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); }
+
+.content-square-descr {
+  margin: 1.5rem 5rem;
+  background-color: #151515;
+  border-radius: 1rem; }
+  .content-square-descr p {
+    padding: 0 1.5rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF; }
+
+.description-img {
+  width: 20rem;
+  display: block;
+  margin: auto;
+  padding: 2rem 0; }
+
+/* Formato para la sección de promoción y contacto */
+.promotion-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #151515;
+  color: #FFFFFF; }
+  .promotion-flex h2 {
+    font-size: 3rem;
+    padding: 3rem 4.5rem;
+    text-align: center; }
+  .promotion-flex img {
+    display: block;
+    margin: auto;
+    width: 100%; }
+  .promotion-flex p {
+    font-size: 1.75rem;
+    padding: 2rem 0;
+    text-align: center; }
+
+.button {
+  font-weight: bold;
+  border-radius: 0.8rem;
+  border: none;
+  height: 3rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 15rem;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  animation: pulse-button 1.5s infinite; }
+
+@keyframes pulse-button {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2); }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0); }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+/* Estilos para página Servicios */
+.banner .banner__img {
+  display: grid;
+  margin: 0 auto;
+  width: 100%; }
+
+.information-services {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-columns: 1fr;
+  background-color: #151515; }
+  .information-services .information-services__text {
+    color: #FFFFFF; }
+    .information-services .information-services__text h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      padding: 1.5rem; }
+    .information-services .information-services__text p {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 1rem 2rem; }
+  .information-services .information-services__video {
+    width: 30rem;
+    height: 22.5rem;
+    margin: 0 auto;
+    padding: 1rem 2rem; }
+
+.information-additional {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #FFFFFF; }
+  .information-additional .information-additional__title {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 0rem; }
+  .information-additional .information-additional__paragraph {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem; }
+
+.technical-service, .accounts-manager, .professional-service {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.technical-service__info, .professional-service__info {
+  background-color: #151515;
+  color: #FFFFFF; }
+  .technical-service__info h2, .professional-service__info h2 {
+    padding: 1rem 2rem;
+    text-align: center; }
+  .technical-service__info p, .professional-service__info p {
+    font-size: 0.95rem;
+    padding: 1rem 2rem; }
+
+.accounts-manager__info {
+  background-color: #F5F5F5;
+  color: #000000; }
+  .accounts-manager__info h2 {
+    padding: 1rem 2rem;
+    text-align: center; }
+  .accounts-manager__info p {
+    font-size: 0.95rem;
+    padding: 1rem 2rem; }
+
+.technical-service__detail, .professional-service__detail, .accounts-manager__detail {
+  padding: 2rem 1.5rem 2rem 3rem; }
+
+.technical-service__detail--color, .professional-service__info--color {
+  background-color: #F5F5F5;
+  color: #000000; }
+
+.talk-service {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  align-items: center; }
+  .talk-service .talk-service__title {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 0rem; }
+  .talk-service .talk-service__paragraph {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem; }
+
+.button {
+  font-weight: bold;
+  border-radius: 0.8rem;
+  border: none;
+  height: 3rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  width: 15rem;
+  font-size: 1.075rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  animation: pulse-button-mod 1.5s infinite; }
+
+@keyframes pulse-button-mod {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 1.5rem rgba(0, 0, 0, 0); }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }
+
+/* Media queries para página responsive */
+@media only screen and (min-width: 800px) {
+  .information-services {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr; }
+    .information-services .information-services__text h2 {
+      font-size: 3rem;
+      text-align: center;
+      padding: 4rem; }
+    .information-services .information-services__text p {
+      font-size: 1.5rem;
+      text-align: center;
+      padding-top: 2rem;
+      padding-left: 3rem;
+      padding-right: 3rem; }
+    .information-services .information-services__video {
+      min-width: 45rem;
+      min-height: 30rem;
+      margin: 2rem auto;
+      padding: 0; }
+  .information-additional {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #FFFFFF; }
+    .information-additional .information-additional__title {
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 2.5rem;
+      padding-bottom: 1rem; }
+    .information-additional .information-additional__paragraph {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 2rem 6rem;
+      padding-bottom: 3rem; }
+  .technical-service, .accounts-manager, .professional-service {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .technical-service__info, .professional-service__info {
+    background-color: #151515;
+    color: #FFFFFF; }
+    .technical-service__info h2, .professional-service__info h2 {
+      padding: 0 5rem;
+      padding-top: 3.5rem;
+      text-align: left;
+      font-size: 2.5rem; }
+    .technical-service__info p, .professional-service__info p {
+      font-size: 1.5rem;
+      padding: 3.5rem 5rem;
+      padding-right: 7rem; }
+  .accounts-manager__info {
+    background-color: #F5F5F5;
+    color: #000000; }
+    .accounts-manager__info h2 {
+      padding: 0 5rem;
+      padding-top: 3.5rem;
+      text-align: left;
+      font-size: 2.5rem; }
+    .accounts-manager__info p {
+      font-size: 1.5rem;
+      padding: 3.5rem 5rem;
+      padding-right: 7rem; }
+  .technical-service__detail, .professional-service__detail, .accounts-manager__detail {
+    padding: 4rem 9rem;
+    font-size: 1.5rem; }
+  .technical-service__detail--color, .professional-service__info--color {
+    background-color: #F5F5F5;
+    color: #000000; }
+  .talk-service {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    align-items: center; }
+    .talk-service .talk-service__title {
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 3rem;
+      padding-bottom: 0rem; }
+    .talk-service .talk-service__paragraph {
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 3rem; }
+  .button {
+    font-weight: bold;
+    border-radius: 0.8rem;
+    border: none;
+    height: 3rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    width: 22rem;
+    font-size: 1.5rem;
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    animation: pulse-button-mod 1.5s infinite; }
+  @keyframes pulse-button-mod {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 1.5rem rgba(0, 0, 0, 0); }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } } }
+
+/* Estilos para la página Industrias */
+.btn-other {
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  animation: pulse-button 1.5s infinite; }
+
+.img-other-styles {
+  width: 3rem;
+  border-radius: 0.5rem; }
+
+.col-hover {
+  transition: 1.5s;
+  z-index: 3; }
+  .col-hover:hover {
+    background-color: #000000;
+    transform: scale(1.01); }
