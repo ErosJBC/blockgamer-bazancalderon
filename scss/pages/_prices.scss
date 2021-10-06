@@ -17,3 +17,24 @@
     background-color: $text-color-one;
     transition: all 0.8s;
 }
+
+.card-style {
+    max-height: 4rem !important;
+    border-radius: 0.625rem;
+    .card-body-style {
+        padding: 0.5rem 1.1rem !important;
+        .text-card {
+            font-weight: 500 !important;
+            font-size: 1.35rem !important;
+        }
+    }
+}
+
+.bg-secondary {
+    --bs-bg-opacity: 0.08;
+    background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.ion-md-add-circle {
+    font-size: 1.75rem !important;
+}
