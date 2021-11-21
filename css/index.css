@@ -432,8 +432,9 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 0.5rem; }
 
 .col-hover {
-  transition: 1.5s;
+  transition: 0.8s;
   z-index: 3; }
   .col-hover:hover {
     background-color: #000000;
+    color: #FFFFFF;
     transform: scale(1.01); }
